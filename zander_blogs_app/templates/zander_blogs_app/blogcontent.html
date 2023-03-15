@@ -1,0 +1,14 @@
+{% extends "zander_blogs_app/base.html" %}
+
+<!--
+  This page will show the content of the blog headline clicked upon
+-->
+
+{% block content %}
+  
+  <p>{{ headLine }}</p>
+
+  <p>Last Updated: {{ blogContent.dateCreated|date:'M d, Y H:i' }}</p>
+  <p>{{ blogContent.content }}</p>
+    
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends "zander_blogs_app/base.html" %}
+
+<!--
+  This page will show the lists of the various blogs posted on the site
+-->
+
+{% block content %}
+  
+  <p>Blogs:</p>
+
+  <ul style="list-style-type: square;">
+    {% for blogHeadline in blogHeadlines %}
+    <li>
+      <a href="{% url "zander_blogs_app:blogcontent" blogHeadline.id %}">
+        {{ blogHeadline }}
+      </a>
+    </li>
+
+    {% empty %}
+    <li>No blogs have been posted yet.</li>
+    {% endfor %}
+  </ul>
+  
+{% endblock content %}

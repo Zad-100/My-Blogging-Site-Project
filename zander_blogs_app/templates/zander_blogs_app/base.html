@@ -1,0 +1,14 @@
+<!--
+  This will be the base html and all the others templates will inherit from this
+  template
+-->
+
+<p>
+  <a href="{% url 'zander_blogs_app:homepage' %}"
+     style="margin-right: 20px;">Zander_Blogs</a>
+  ---
+  <a href="{% url 'zander_blogs_app:bloglist' %}"
+     style="margin-left: 20px;">All Blogs List</a>
+</p>
+
+{% block content %} {% endblock content %}
